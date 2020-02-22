@@ -15,4 +15,4 @@
 - Scoops ahoy
 - Where are you located
 - What do you think about kids
-- Is there Ice Cream in <<ZIP>>? *Providing a valid nyc zipcode*
+- Is there Ice Cream in < ZIP >? *Providing a valid nyc zipcode*
