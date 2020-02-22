@@ -13,6 +13,6 @@
 
 ##  Questions you can ask Captain Steve
 - Scoops ahoy
-- Where are you located
-- What do you think about kids
+- Where are you located?
+- What do you think about kids?
 - Is there Ice Cream in < ZIP >? *Provide a valid nyc zipcode*
