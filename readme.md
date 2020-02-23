@@ -9,7 +9,7 @@
 - Open 3 terminals and run:
   - `npm run webpack:dev`
   - `npm run server`
-  - `npm run jest:watch`
+  - `npm run test:watch`
 
 ##  Questions you can ask Captain Steve
 - Scoops ahoy
