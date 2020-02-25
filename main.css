@@ -1,0 +1,53 @@
+/* pick background color based on photo:
+https://www.ginifab.com/feeds/pms/color_picker_from_image.php */
+
+body {
+  align-items: center;
+  background: #8daabf url("/images/bkg1Cropped.jpg") repeat fixed center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: #8daabf; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #8daabf;
+}
+
+.button:hover {
+  background-color: #8daabf;
+}
+
+#header {
+  background: #7394ab left top;
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: 0 auto 18px;
+  overflow: hidden;
+
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+}
