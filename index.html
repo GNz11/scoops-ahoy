@@ -23,17 +23,66 @@
         <li><img src="/images/image3.jpg" alt="image3"></li>
         <li><img src="/images/image4.jpg" alt="image4"></li>
       </ul>
-  </div>
+    </div>
 
       <br>
       <br>
       <br>
       <br>
-      <button type="button" class="button">Chat with Captain Steve!</button>
+      <button type="button" class="button" onclick="chatOn()">
+        Chat with Captain Steve!
+      </button>
+      <div id="chat">
+        <div id="messages"></div>
+        <form name="chat-message" onsubmit="event.preventDefault(); newMessage()">
+          <input type="text" id="message-input" name="message-input" size="50" required>
+          <input type="submit" style="display: none" />
+        </form>
+        <button onclick="chatOff()">End Chat</button>
+      </div>
 
   </div>
 
 
   <script src="dist/main.js"></script>
+  <script>
+    function chatOn() {
+      let chatElement = document.getElementById("chat")
+      chatElement.style.display = "block";
+    }
+
+    function chatOff() {
+      let chatElement = document.getElementById("chat")
+      chatElement.style.display = "none";
+    }
+
+    var messageIndex = 0;
+    function newMessage() {
+      let message = document.getElementById("message-input").value;
+      document.getElementById("message-input").value = "";
+      let chatElement = document.getElementById("messages");
+      let textnode = document.createTextNode("you:  " + message);
+      chatElement.appendChild(textnode);
+      chatElement.appendChild(document.createElement("br"));
+      let response = document.createTextNode("Captain Steve:  Yeah, that's a no.");
+      if (message.toLowerCase() === "scoops ahoy") {
+        response = document.createTextNode("Captain Steve:  Scoops ahoy!");
+      } else if (message.toLowerCase() == "where are you located?") {
+        response = document.createTextNode("Captain Steve:  Starcourt mall, Hawkins Indiana");
+      } else if (message.toLowerCase() == "where are you found?") {
+        response = document.createTextNode("Captain Steve:  Starcourt mall, Hawkins Indiana");
+      } else if (message.toLowerCase() == "what do you think about kids?") {
+        if (messageIndex) {
+          response = document.createTextNode("Captain Steve:  Turns out I'm a pretty damn good babysitter.");
+          messageIndex = 0;
+        } else {
+          response = document.createTextNode("Captain Steve:  Man, kids are the worst! Who needs 'em, anyway?");
+          messageIndex = 1;
+        }
+      }
+      chatElement.appendChild(response);
+      chatElement.appendChild(document.createElement("br"));
+    }
+  </script>
 </body>
 </html>
