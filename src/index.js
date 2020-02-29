@@ -1,13 +1,13 @@
-import sum from './sum';
+// import sum from './sum';
 import axios from 'axios';
 
 // just testing
-console.log(sum(1,5));
+// console.log(sum(1,5));
 
-const main = async () => {
-  const res = await axios.get('https://fizal.me/pokeapi/api/v2/name/bulbasaur.json');
-  console.log(res.data);
-}
+// const main = async () => {
+//   const res = await axios.get('https://fizal.me/pokeapi/api/v2/name/bulbasaur.json');
+//   console.log(res.data);
+// }
 
 const Carousel = require("vanilla-js-carousel");
 
